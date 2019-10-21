@@ -47,6 +47,7 @@ namespace ClassWork21_10_19.DataAccess
 			modelBuilder.Entity<BooksStudents>().Property(x => x.StudentId).HasColumnName("_student_ID");
 
 			//modelBuilder.Entity<Book>().Property(x => x.Author).HasColumnName("_author_ID");
+			// Меняю код
 
 			modelBuilder.Entity<Author>()
 				.HasMany(x => x.Books)
