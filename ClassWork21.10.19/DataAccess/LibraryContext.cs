@@ -43,11 +43,11 @@ namespace ClassWork21_10_19.DataAccess
 			modelBuilder.Entity<Author>().ToTable("_authors").Property(x => x.Fullname).HasColumnName("_fullName");
 			modelBuilder.Entity<Student>().ToTable("_students").Property(x => x.Fullname).HasColumnName("_fullName");
 			modelBuilder.Entity<BooksStudents>().ToTable("_books_students");
-			modelBuilder.Entity<BooksStudents>().Property(x=>x.BookId).HasColumnName("_book_ID");
-			modelBuilder.Entity<BooksStudents>().Property(x=>x.StudentId).HasColumnName("_student_ID");
+			modelBuilder.Entity<BooksStudents>().Property(x => x.BookId).HasColumnName("_book_ID");
+			modelBuilder.Entity<BooksStudents>().Property(x => x.StudentId).HasColumnName("_student_ID");
 
 			//modelBuilder.Entity<Book>().Property(x => x.Author).HasColumnName("_author_ID");
-	 
+
 			modelBuilder.Entity<Author>()
 				.HasMany(x => x.Books)
 				.WithOne(x => x.Author);
